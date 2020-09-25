@@ -28,8 +28,8 @@ internal partial class Program
     private static string GetDateOfFriday(int dateOfWeek, int day, int month, int year)
     {
         var dt = new DateTime(year, month, day);
-        if (dateOfWeek == 6)
-            dt = dt.AddDays(5);
+        if (dateOfWeek == DayOfWeek.Saturday.GetHashCode())
+            dt = dt.AddDays(6);
         else
             dt = dt.AddDays(DayOfWeek.Friday.GetHashCode() - dateOfWeek);
 
