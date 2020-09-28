@@ -49,9 +49,7 @@ namespace PeerReview1
                     generatedNumber = GenerateNumber();
                 }
                 else
-                {
                     ShowBullsAndCows(bulls, cows);
-                }
             }
         }
 
@@ -101,6 +99,11 @@ namespace PeerReview1
             return number;
         }
 
+        /// <summary>
+        /// Shows bulls and cows count to user
+        /// </summary>
+        /// <param name="bulls">Bulls count</param>
+        /// <param name="cows">Cows count</param>
         private static void ShowBullsAndCows(int bulls, int cows)
         {
             Console.WriteLine($"\nBulls: {bulls}\nCows: {cows}\n");
