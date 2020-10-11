@@ -13,6 +13,7 @@ namespace PeerReview1
         private static void Main()
         {
             var generatedNumber = GenerateNumber();
+            Console.WriteLine(generatedNumber);
 
             while (true)
             {
@@ -47,6 +48,7 @@ namespace PeerReview1
                         break;
 
                     generatedNumber = GenerateNumber();
+                    Console.WriteLine(generatedNumber);
                 }
                 else
                     ShowBullsAndCows(bulls, cows);
@@ -60,9 +62,11 @@ namespace PeerReview1
         private static int GenerateNumber()
         {
             var random = new Random();
-            var result = random.Next(1, 10);
-
             var hashSet = new HashSet<int>();
+            
+            var result = random.Next(1, 10);
+            hashSet.Add(result);
+            
             for (var i = 1; i < DigitCount; i++)
             {
                 var number = random.Next(0, 10);
