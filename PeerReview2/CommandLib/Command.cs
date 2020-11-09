@@ -5,6 +5,10 @@ namespace CommandLib
 {
     public class Command
     {
+        private Command()
+        {
+        }
+
         /// <summary>
         /// Command name, for example: 'ls', 'cd', etc...
         /// </summary>

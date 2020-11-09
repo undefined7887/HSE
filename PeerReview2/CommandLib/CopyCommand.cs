@@ -3,6 +3,9 @@ using System.IO;
 
 namespace CommandLib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CopyCommand : ICommandExecutable
     {
         public string GetDescription()
@@ -44,7 +47,7 @@ namespace CommandLib
             }
             catch (IOException e)
             {
-                Console.WriteLine($"IO error occured: {e.Message}");
+                Console.WriteLine($"IO error occured: {e.GetType()} {e.Message}");
             }
             catch (Exception e)
             {

@@ -15,15 +15,8 @@ namespace FileManager
         /// </summary>
         private static void Main()
         {
-            try
-            {
-                Context.Init();
-                Observe();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Something bad has happened");
-            }
+            Context.Init();
+            Observe();
         }
 
         /// <summary>
